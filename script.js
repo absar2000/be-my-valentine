@@ -24,4 +24,14 @@ function handleNoClick() {
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
+    // 🎵 Play music when Yes is clicked
+const yesBtn = document.querySelector(".yes-btn");
+const music = document.getElementById("bgMusic");
+
+if (yesBtn && music) {
+  yesBtn.addEventListener("click", () => {
+    music.play();
+  });
+}
+
 }
