@@ -6,13 +6,32 @@
     <title>Knew you would say yes!</title>
     <link rel="stylesheet" href="./yes_style.css">
 </head>
+
 <body>
     <div class="container">
         <h1 class="header_text">Knew you would say yes!</h1>
         <div class="gif_container">
-            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif">
+            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" alt="Bear kiss">
         </div>
     </div>
+
+    <!-- 🎶 AUDIO -->
+    <audio id="bgMusic" loop>
+        <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ▶️ PLAY MUSIC AFTER PAGE LOAD -->
+    <script>
+        window.addEventListener("load", () => {
+            const music = document.getElementById("bgMusic");
+
+            if (music) {
+                music.volume = 1.0;
+                music.play().catch(err => {
+                    console.log("Playback blocked:", err);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
