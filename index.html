@@ -6,25 +6,27 @@
     <title>Will You Be My Valentine Janni ?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="gif_container">
             <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Cute GIF">
         </div>
+
         <h1>Will you be my Valentine?</h1>
+
         <div class="buttons">
             <button class="yes-button" onclick="handleYesClick()">Yes</button>
             <button class="no-button" onclick="handleNoClick()">No</button>
         </div>
-        
     </div>
-    <script src="script.js"></script>
+
+    <!-- 🎵 AUDIO MUST COME BEFORE SCRIPT -->
     <audio id="bgMusic" preload="auto">
-  <source src="music/song.mp3" type="audio/mpeg">
-</audio>
+        <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
 
-<script src="script.js"></script>
-
-
+    <!-- ✅ SCRIPT ONLY ONCE, AT THE END -->
+    <script src="script.js"></script>
 </body>
 </html>
