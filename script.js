@@ -27,16 +27,8 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
-  const music = document.getElementById("bgMusic");
+  window.location.href = "yes_page.html";
+}
 
-  // 🎵 PLAY MUSIC
-  if (music) {
-    music.play();
-  }
-
-  // ⏳ Delay redirect so music starts
-  setTimeout(() => {
-    window.location.href = "yes_page.html";
-  }, 500);
 }
 
