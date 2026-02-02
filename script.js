@@ -1,3 +1,4 @@
+// Messages for NO button
 const messages = [
   "Are you sure?",
   "Really sure??",
@@ -13,6 +14,7 @@ const messages = [
 
 let messageIndex = 0;
 
+// NO button logic
 function handleNoClick() {
   const noButton = document.querySelector(".no-button");
   const yesButton = document.querySelector(".yes-button");
@@ -26,9 +28,7 @@ function handleNoClick() {
   yesButton.style.fontSize = `${currentSize * 1.5}px`;
 }
 
+// YES button logic (ONLY redirect)
 function handleYesClick() {
   window.location.href = "yes_page.html";
 }
-
-}
-
