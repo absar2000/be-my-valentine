@@ -1,4 +1,3 @@
-// Messages for NO button
 const messages = [
   "Are you sure?",
   "Really sure??",
@@ -14,7 +13,6 @@ const messages = [
 
 let messageIndex = 0;
 
-// NO button logic
 function handleNoClick() {
   const noButton = document.querySelector(".no-button");
   const yesButton = document.querySelector(".yes-button");
@@ -25,10 +23,14 @@ function handleNoClick() {
   const currentSize = parseFloat(
     window.getComputedStyle(yesButton).fontSize
   );
-  yesButton.style.fontSize = `${currentSize * 1.5}px`;
+
+  // 🔒 prevent overlap
+  if (currentSize < 80) {
+    yesButton.style.fontSize = `${currentSize * 1.3}px`;
+  }
 }
 
-// YES button logic (ONLY redirect)
 function handleYesClick() {
   window.location.href = "yes_page.html";
 }
+
